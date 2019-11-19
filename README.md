@@ -16,12 +16,14 @@ The preprocessing of the dataset is performed by the preprocess.py file. As an o
 Keep in mind that this file works with the sampled dataset. There are a couple of ways available to make it run to the full dataset, but the easiest is to edit the samples.py file by commenting out the following lines of code: 
 
 train_df = train_df.sample(frac=0.001, random_state=1)
+
 predict_df = predict_df.sample(frac=0.001, random_state=1)
 
 Another easy way would be to change the frac parameter in both of the above lines of code to frac=1. 
 Both of the ways proposed above are the easier to run but make take a bit of time. If you don't want to spend this time, replace the following lines of code in the preprocess.py file: 
 
 train_df = pd.read_csv('./Samples/train.csv')
+
 predict_df = pd.read_csv('./Samples/test.csv')
 
 with: 
